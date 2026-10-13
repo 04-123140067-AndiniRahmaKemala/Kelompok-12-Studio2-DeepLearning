@@ -102,5 +102,3 @@ repo-kelompok/
 * `Studio2_Kompetisi_Sampah_v2.ipynb`: notebook eksperimen dan pelatihan model.
 
 **Catatan penting:** `get_model()` hanya membangun arsitektur dan tidak mengunduh bobot atau memuat `model.pth` di dalam fungsi tersebut. Pemuatan bobot dilakukan oleh mekanisme evaluasi. Pastikan transformasi evaluasi menerima gambar PIL RGB dan mengembalikan tensor dengan bentuk `[3, H, W]`.
-
-Repositori GitHub harus publik selama periode yang ditentukan. Jangan mengunggah dataset gambar ke repositori publik. Jika `model.pth` berukuran lebih dari 100 MB, gunakan GitHub Release atau Git LFS dan cantumkan tautannya di README. Ukuran maksimum bobot model adalah 500 MB.
