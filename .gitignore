@@ -1,0 +1,7 @@
+/train/
+/my_train/
+/my_val/
+/dataset_mahasiswa/
+*.zip
+__pycache__/
+.ipynb_checkpoints/
