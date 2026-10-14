@@ -1,4 +1,4 @@
-# Studio 2 — Klasifikasi Sampah · Kelompok `<12/NAMA KELOMPOK>`
+# Studio 2 — Klasifikasi Sampah · Kelompok 12
 
 Deep Learning (IF25-40401) · Teknik Informatika ITERA · Semester Ganjil 2026/2027
 
@@ -6,9 +6,9 @@ Deep Learning (IF25-40401) · Teknik Informatika ITERA · Semester Ganjil 2026/2
 
 | No | Nama Lengkap               | NIM               | Kontribusi utama |
 | -- | -------------------------- | ----------------- | ---------------- |
-| 1  | `<Alliyah Salsabilla>` | `<123140014>` | `<Kontribusi>`   |
-| 2  | `<Andini Rahma Kemala>` | `<123140067>` | `<Kontribusi>`   |
-| 3  | `<Zahwa Natasya Hamzah>` | `<123140069>` | `<Kontribusi>`   |
+| 1  | Alliyah Salsabilla | 123140014 | Kontribusi   |
+| 2  | Andini Rahma Kemala | 123140067 | Kontribusi   |
+| 3  | Zahwa Natasya Hamzah | 123140069 | Kontribusi  |
 
 ## Ringkasan Pendekatan
 
