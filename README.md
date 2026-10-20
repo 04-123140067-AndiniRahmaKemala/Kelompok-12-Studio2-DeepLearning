@@ -75,6 +75,16 @@ F1-score per kelas:
 
 Validasi lokal menggunakan split sebesar 15% dari dataset training resmi. Hasil ini tidak mewakili skor validation set tersembunyi yang digunakan oleh tim pengajar.
 
+Catatan eksperimen:
+
+- Model menggunakan EfficientNet-B2 pretrained.
+- Ukuran input gambar: `288 × 288` piksel.
+- Training dilakukan selama 15 epoch.
+- Macro-F1 dan akurasi dihitung menggunakan skrip evaluasi `evaluate.py` pada validation set lokal.
+- F1-score tertinggi diperoleh kelas `saset_kemasan`, yaitu 0.9697, sedangkan terendah diperoleh kelas `kertas_kardus`, yaitu 0.9091.
+- Dibandingkan Preview 1, akurasi meningkat dari 0.9317 menjadi 0.9561 dan Macro-F1 meningkat dari 0.9294 menjadi 0.9524.
+- Eksperimen lanjutan dapat dilakukan untuk meningkatkan generalisasi model, khususnya pada kelas `kertas_kardus`.
+
 ## Perbandingan Hasil Evaluasi Preview 1 dan Preview 2
 
 | Parameter | Preview 1 | Preview 2 | Perubahan |
@@ -94,16 +104,6 @@ Validasi lokal menggunakan split sebesar 15% dari dataset training resmi. Hasil 
 | `kertas_kardus` | 0.9020 | 0.9091 | +0.0071 |
 | `saset_kemasan` | 0.9261 | 0.9697 | +0.0436 |
 | `styrofoam` | 0.9417 | 0.9588 | +0.0171 |
-
-Catatan eksperimen:
-
-- Model menggunakan EfficientNet-B2 pretrained.
-- Ukuran input gambar: `288 × 288` piksel.
-- Training dilakukan selama 15 epoch.
-- Macro-F1 dan akurasi dihitung menggunakan skrip evaluasi `evaluate.py` pada validation set lokal.
-- F1-score tertinggi diperoleh kelas `saset_kemasan`, yaitu 0.9697, sedangkan terendah diperoleh kelas `kertas_kardus`, yaitu 0.9091.
-- Dibandingkan Preview 1, akurasi meningkat dari 0.9317 menjadi 0.9561 dan Macro-F1 meningkat dari 0.9294 menjadi 0.9524.
-- Eksperimen lanjutan dapat dilakukan untuk meningkatkan generalisasi model, khususnya pada kelas `kertas_kardus`.
 
 
 ## Cara Reproduksi
