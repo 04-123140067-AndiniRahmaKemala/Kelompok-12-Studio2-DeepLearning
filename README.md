@@ -34,7 +34,7 @@ Macro-F1 digunakan sebagai metrik utama evaluasi, dengan akurasi sebagai metrik 
 | Putaran | Commit model | Macro-F1 (validasi lokal) | Macro-F1 (validation set tersembunyi) |
 |---|---|---:|---|
 | Preview 1 (14 Okt 2026) | `aec291b` | 0.9294 | Belum diumumkan |
-| Preview 2 (21 Okt 2026) | Belum tersedia | Belum diisi | Belum diumumkan |
+| Preview 2 (21 Okt 2026) | Belum tersedia | 0.9524 | Belum diumumkan |
 | Final (25 Okt 2026) | Belum tersedia | Belum diisi | Belum diumumkan |
 
 Hasil evaluasi lokal Preview 1:
@@ -57,6 +57,34 @@ Catatan eksperimen:
 - Akurasi validasi terbaik selama training adalah 0.9317 pada epoch ke-5.
 - Macro-F1 dan akurasi dihitung kembali menggunakan skrip evaluasi resmi pada validation set lokal.
 - Eksperimen lanjutan dapat dilakukan pada putaran berikutnya untuk meningkatkan generalisasi model.
+
+Hasil evaluasi lokal Preview 2:
+
+- Akurasi: `0.9561`
+- Macro-F1: `0.9524`
+- Jumlah gambar validasi lokal: 410
+- Jumlah gambar training: 2.346
+
+F1-score per kelas:
+
+- `botol_plastik`: 0.9630
+- `gelas_plastik`: 0.9615
+- `kertas_kardus`: 0.9091
+- `saset_kemasan`: 0.9697
+- `styrofoam`: 0.9588
+
+Validasi lokal menggunakan split sebesar 15% dari dataset training resmi. Hasil ini tidak mewakili skor validation set tersembunyi yang digunakan oleh tim pengajar.
+
+Catatan eksperimen:
+
+- Model menggunakan EfficientNet-B2 pretrained.
+- Ukuran input gambar: `288 × 288` piksel.
+- Training dilakukan selama 15 epoch.
+- Macro-F1 dan akurasi dihitung menggunakan skrip evaluasi `evaluate.py` pada validation set lokal.
+- F1-score tertinggi diperoleh kelas `saset_kemasan`, yaitu 0.9697, sedangkan terendah diperoleh kelas `kertas_kardus`, yaitu 0.9091.
+- Dibandingkan Preview 1, akurasi meningkat dari 0.9317 menjadi 0.9561 dan Macro-F1 meningkat dari 0.9294 menjadi 0.9524.
+- Eksperimen lanjutan dapat dilakukan untuk meningkatkan generalisasi model, khususnya pada kelas `kertas_kardus`.
+
 
 ## Cara Reproduksi
 
