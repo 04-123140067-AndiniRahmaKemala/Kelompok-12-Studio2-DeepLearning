@@ -34,7 +34,7 @@ Macro-F1 digunakan sebagai metrik utama evaluasi, dengan akurasi sebagai metrik 
 | Putaran | Commit model | Macro-F1 (validasi lokal) | Macro-F1 (validation set tersembunyi) |
 |---|---|---:|---|
 | Preview 1 (14 Okt 2026) | `aec291b` | 0.9294 | Belum diumumkan |
-| Preview 2 (21 Okt 2026) | Belum tersedia | 0.9524 | Belum diumumkan |
+| Preview 2 (21 Okt 2026) | `54b75ec` | 0.9524 | Belum diumumkan |
 | Final (25 Okt 2026) | Belum tersedia | Belum diisi | Belum diumumkan |
 
 Hasil evaluasi lokal Preview 1:
