@@ -75,6 +75,26 @@ F1-score per kelas:
 
 Validasi lokal menggunakan split sebesar 15% dari dataset training resmi. Hasil ini tidak mewakili skor validation set tersembunyi yang digunakan oleh tim pengajar.
 
+## Perbandingan Hasil Evaluasi Preview 1 dan Preview 2
+
+| Parameter | Preview 1 | Preview 2 | Perubahan |
+|---|---:|---:|---:|
+| Arsitektur model | ResNet-18 | EfficientNet-B2 | Diperbarui |
+| Akurasi | 0.9317 (93.17%) | 0.9561 (95.61%) | +0.0244 |
+| Macro-F1 | 0.9294 (92.94%) | 0.9524 (95.24%) | +0.0230 |
+| Jumlah gambar training | 2.343 | 2.346 | +3 |
+| Jumlah gambar validasi lokal | 410 | 410 | Tetap |
+
+### Perbandingan F1-Score per Kelas
+
+| Kelas | Preview 1 | Preview 2 | Perubahan |
+|---|---:|---:|---:|
+| `botol_plastik` | 0.9404 | 0.9630 | +0.0226 |
+| `gelas_plastik` | 0.9367 | 0.9615 | +0.0248 |
+| `kertas_kardus` | 0.9020 | 0.9091 | +0.0071 |
+| `saset_kemasan` | 0.9261 | 0.9697 | +0.0436 |
+| `styrofoam` | 0.9417 | 0.9588 | +0.0171 |
+
 Catatan eksperimen:
 
 - Model menggunakan EfficientNet-B2 pretrained.
