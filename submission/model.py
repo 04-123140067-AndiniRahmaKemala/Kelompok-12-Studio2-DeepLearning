@@ -1,29 +1,22 @@
-"""Contoh submission: ResNet-18 dengan head 5 kelas.
-
-Ganti isi file ini dengan arsitektur kelompok Anda. Aturan:
-  - get_model() hanya MEMBANGUN arsitektur (jangan mengunduh bobot pretrained di sini,
-    jangan memuat model.pth di sini — evaluate.py yang memuatnya).
-  - get_transform() harus SAMA dengan transform validasi saat Anda melatih model.
-  - Output model: logits [batch, 5], urutan kelas:
-      0 botol_plastik, 1 gelas_plastik, 2 kertas_kardus, 3 saset_kemasan, 4 styrofoam
-    (urutan alfabetis — sama dengan torchvision.datasets.ImageFolder).
-"""
-import torch.nn as nn
-from torchvision import models, transforms
+"""Submission Studio 2 - efficientnet_b2 (timm), input 288 px."""
+import timm
+from torchvision import transforms
 
 NUM_CLASSES = 5
+IMG_SIZE = 288
+MEAN = (0.485, 0.456, 0.406)
+STD = (0.229, 0.224, 0.225)
 
 
 def get_model():
-    model = models.resnet18(weights=None)
-    model.fc = nn.Linear(model.fc.in_features, NUM_CLASSES)
-    return model
+    """Bangun arsitektur saja - TIDAK mengunduh bobot / memuat model.pth di sini."""
+    return timm.create_model("efficientnet_b2", pretrained=False, num_classes=NUM_CLASSES)
 
 
 def get_transform():
+    """Transform validasi: PIL.Image (RGB) -> Tensor [3, H, W]."""
     return transforms.Compose([
-        transforms.Resize(256),
-        transforms.CenterCrop(224),
+        transforms.Resize((IMG_SIZE, IMG_SIZE)),
         transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+        transforms.Normalize(MEAN, STD),
     ])

@@ -1,0 +1,177 @@
+{
+  "args": {
+    "data": "/content/sampah_studio2/train",
+    "submission": "/content/sampah_studio2/submission",
+    "my_val": "/content/sampah_studio2/my_val",
+    "results": "/content/sampah_studio2/results",
+    "csv": "/content/sampah_studio2/train_sources.csv",
+    "backbone": "efficientnet_b2",
+    "img_size": 288,
+    "batch_size": 32,
+    "epochs": 15,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.1,
+    "val_frac": 0.15,
+    "seed": 42,
+    "workers": 2,
+    "full_data": false,
+    "no_pretrained": false
+  },
+  "params_million": 7.708039,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.0842364128321815,
+      "val_loss": 0.5685458206548923,
+      "val_macro_f1": 0.8178591524916964,
+      "val_acc": 0.8219512195121951
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.9585463576120873,
+      "val_loss": 0.366998436102053,
+      "val_macro_f1": 0.893247682945554,
+      "val_acc": 0.8975609756097561
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.7066395927781928,
+      "val_loss": 0.29936589482353954,
+      "val_macro_f1": 0.9105952826028257,
+      "val_acc": 0.9146341463414634
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.6230808280102195,
+      "val_loss": 0.29430141826955286,
+      "val_macro_f1": 0.9097922677385162,
+      "val_acc": 0.9146341463414634
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5746188265820072,
+      "val_loss": 0.287056187449432,
+      "val_macro_f1": 0.9428956357891753,
+      "val_acc": 0.9463414634146341
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5479798055674932,
+      "val_loss": 0.29300589285245754,
+      "val_macro_f1": 0.9270528243093994,
+      "val_acc": 0.9317073170731708
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5247779496728557,
+      "val_loss": 0.2669435121664187,
+      "val_macro_f1": 0.9428743324611281,
+      "val_acc": 0.9463414634146341
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5200455764385119,
+      "val_loss": 0.2504770467921001,
+      "val_macro_f1": 0.9475614549451471,
+      "val_acc": 0.9512195121951219
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.5123630843750419,
+      "val_loss": 0.24989792937185706,
+      "val_macro_f1": 0.9405861160437677,
+      "val_acc": 0.9439024390243902
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.4987823175240869,
+      "val_loss": 0.2559197792192785,
+      "val_macro_f1": 0.9524104379774483,
+      "val_acc": 0.9560975609756097
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.49615916405638605,
+      "val_loss": 0.24782571414621865,
+      "val_macro_f1": 0.9491220025011579,
+      "val_acc": 0.9536585365853658
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.48761248547736913,
+      "val_loss": 0.24653658532514805,
+      "val_macro_f1": 0.9523625968807139,
+      "val_acc": 0.9560975609756097
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.48787562242925986,
+      "val_loss": 0.2513705726076917,
+      "val_macro_f1": 0.9495990043440905,
+      "val_acc": 0.9536585365853658
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.47838046044519505,
+      "val_loss": 0.2508732151694414,
+      "val_macro_f1": 0.9506078509536579,
+      "val_acc": 0.9536585365853658
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.48104463456428215,
+      "val_loss": 0.251197769292971,
+      "val_macro_f1": 0.9403547902824,
+      "val_acc": 0.9439024390243902
+    }
+  ],
+  "final_val": {
+    "macro_f1": 0.9524104379774483,
+    "accuracy": 0.9560975609756097,
+    "per_class_f1": {
+      "botol_plastik": 0.962962962962963,
+      "gelas_plastik": 0.9615384615384616,
+      "kertas_kardus": 0.9090909090909091,
+      "saset_kemasan": 0.9696969696969697,
+      "styrofoam": 0.9587628865979382
+    },
+    "confusion_matrix": [
+      [
+        78,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        75,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        50,
+        1,
+        1
+      ],
+      [
+        3,
+        0,
+        1,
+        96,
+        0
+      ],
+      [
+        2,
+        1,
+        3,
+        1,
+        93
+      ]
+    ]
+  }
+}
