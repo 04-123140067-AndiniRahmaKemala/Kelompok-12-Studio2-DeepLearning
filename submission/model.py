@@ -1,22 +1,30 @@
-"""Submission Studio 2 - efficientnet_b2 (timm), input 288 px."""
-import timm
+
+import torch.nn as nn
+from torchvision.models import convnext_tiny
 from torchvision import transforms
 
-NUM_CLASSES = 5
-IMG_SIZE = 288
-MEAN = (0.485, 0.456, 0.406)
-STD = (0.229, 0.224, 0.225)
-
+CLASS_NAMES = [
+    "botol_plastik",
+    "gelas_plastik",
+    "kertas_kardus",
+    "saset_kemasan",
+    "styrofoam",
+]
 
 def get_model():
-    """Bangun arsitektur saja - TIDAK mengunduh bobot / memuat model.pth di sini."""
-    return timm.create_model("efficientnet_b2", pretrained=False, num_classes=NUM_CLASSES)
-
+    model = convnext_tiny(weights=None)
+    model.classifier[2] = nn.Linear(
+        model.classifier[2].in_features,
+        len(CLASS_NAMES)
+    )
+    return model
 
 def get_transform():
-    """Transform validasi: PIL.Image (RGB) -> Tensor [3, H, W]."""
     return transforms.Compose([
-        transforms.Resize((IMG_SIZE, IMG_SIZE)),
+        transforms.Resize((224, 224)),
         transforms.ToTensor(),
-        transforms.Normalize(MEAN, STD),
+        transforms.Normalize(
+            mean=(0.485, 0.456, 0.406),
+            std=(0.229, 0.224, 0.225)
+        ),
     ])
